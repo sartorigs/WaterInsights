@@ -46,3 +46,51 @@ C:\Users\Gabriel\source\repos\Api\Projeto Aplicado\Projeto Aplicado\obj\Debug\ne
 C:\Users\Gabriel\source\repos\Api\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.pdb
 C:\Users\Gabriel\source\repos\Api\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.genruntimeconfig.cache
 C:\Users\Gabriel\source\repos\Api\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\ref\Projeto Aplicado.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\appsettings.json
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Projeto Aplicado.exe
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Projeto Aplicado.deps.json
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Projeto Aplicado.runtimeconfig.json
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Projeto Aplicado.runtimeconfig.dev.json
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Projeto Aplicado.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Projeto Aplicado.pdb
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Projeto Aplicado.Views.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Projeto Aplicado.Views.pdb
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Npgsql.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.csproj.AssemblyReference.cache
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.AssemblyInfoInputs.cache
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.AssemblyInfo.cs
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.RazorAssemblyInfo.cache
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.RazorAssemblyInfo.cs
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\scopedcss\bundle\Projeto Aplicado.styles.css
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\staticwebassets\Projeto Aplicado.StaticWebAssets.Manifest.cache
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.TagHelpers.input.cache
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.TagHelpers.output.cache
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.RazorCoreGenerate.cache
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.RazorTargetAssemblyInfo.cache
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.RazorTargetAssemblyInfo.cs
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.Views.pdb
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.csproj.CopyComplete
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\refint\Projeto Aplicado.dll
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.pdb
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.genruntimeconfig.cache
+C:\Users\Gabriel\source\repos\Projeto Aplicado\Projeto Aplicado\obj\Debug\net5.0\ref\Projeto Aplicado.dll

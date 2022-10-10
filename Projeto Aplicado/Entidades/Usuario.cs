@@ -16,6 +16,7 @@ namespace Projeto_Aplicado.Entidades
         public string Email { get; set; }
         [Required]
         public string Senha { get; set; }
+        public Regiao Regiao { get; set; } 
         public List<UsuarioProjeto> UsuarioProjeto { get; set; }
     }
 }

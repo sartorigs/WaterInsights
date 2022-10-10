@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Projeto_Aplicado.Context;
@@ -9,9 +10,10 @@ using Projeto_Aplicado.Context;
 namespace Projeto_Aplicado.Migrations
 {
     [DbContext(typeof(AguaContext))]
-    partial class AguaContextModelSnapshot : ModelSnapshot
+    [Migration("20221010230511_novas entidades")]
+    partial class novasentidades
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
