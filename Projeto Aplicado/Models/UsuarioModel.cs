@@ -11,5 +11,8 @@ namespace Projeto_Aplicado.Models
         public DateTime DataNascimento { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
+        public string Bairro { get; set; }
+        public string Estado { get; set; }
+        public string Cidade { get; set; }
     }
 }

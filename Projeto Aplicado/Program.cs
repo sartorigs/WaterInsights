@@ -22,5 +22,7 @@ namespace Projeto_Aplicado
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+    
     }
+    
 }

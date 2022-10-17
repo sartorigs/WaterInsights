@@ -1,12 +1,18 @@
 ﻿using Projeto_Aplicado.Entidades;
 using Projeto_Aplicado.Models;
 using Microsoft.AspNetCore.Mvc;
+using Projeto_Aplicado.Repositorios.Interfaces;
 
 namespace Projeto_Aplicado.Controllers
 {
     public class CadastroController : Controller
     {
-        public IActionResult Novo()
+        private readonly IProjetoRepository _projetoRepository;
+        public CadastroController(IProjetoRepository projetoRepository)
+        {
+            _projetoRepository = projetoRepository;
+        }
+        public IActionResult Cadastro()
         {
             var model = new UsuarioModel();
             return View(model);
@@ -23,13 +29,13 @@ namespace Projeto_Aplicado.Controllers
                     Regiao = new Regiao()
                     {
                         Id = model.id,
-                        Bairro = model.,
+                        Bairro = model.Bairro,
                         Cidade = model.Cidade,
                         Estado = model.Estado
                     }
                 };
-                _colegioRepositorio.Salvar(colegio);
-                return RedirectToAction("Index", "Colegio");
+                _projetoRepository.Cadastrar(usuario);
+                return RedirectToAction("Index", "Home");
             }
             return View(model);
         }

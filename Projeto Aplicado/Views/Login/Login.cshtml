@@ -1,5 +1,40 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<div style="position: relative">
+    <div style="height 800px;width: 800px;position: absolute;top: 50%;left: 50%;margin: +150px 0 0 -230px;">
+        <div class="row g-1 align-items-center">
+            <div class="col-7">
+                <label for="email" class="col-form-label">E-mail</label>
+                <input type="email" id="email" class="form-control"> 
+            </div>   
+        </div>
+        <div class="row g-1 align-items-center">
+            <div class="col-7">
+                <label for="senha" class="col-form-label">Senha</label>
+                <input type="password" id="senha" class="form-control">
+            </div>
+        </div>
+        <div style="margin-top: 1rem; justify-content:space-between" class="row g-1">
+            <div class="col-7">
+                <a style="width: 110px" href="../Cadastro/Cadastro" type="submit" class="btn btn-danger">Criar Conta</a>
+                <button style="width: 90px; float: right" type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var senha = $('#senha');
+    var olho= $("#olho");
+
+    olho.mousedown(function() {
+      senha.attr("type", "text");
+    });
+
+    olho.mouseup(function() {
+      senha.attr("type", "password");
+    });
+    $( "#olho" ).mouseout(function() { 
+      $("#senha").attr("type", "password");
+    });
+</script>

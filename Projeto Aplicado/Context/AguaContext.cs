@@ -10,6 +10,8 @@ namespace Projeto_Aplicado.Context
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Projeto> Projetos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<PowerBi> PowerBis { get; set; }
+        public DbSet<Regiao> Regioes { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Projeto_Aplicado.Context;
+using Projeto_Aplicado.Repositorios;
+using Projeto_Aplicado.Repositorios.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +27,10 @@ namespace Projeto_Aplicado
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddDbContext<AguaContext>(options => options.UseNpgsql("Server=localhost;Port=5432;Database=agua;User Id=postgres;Password=root;"));
+
+            services.AddScoped<IProjetoRepository, ProjetoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

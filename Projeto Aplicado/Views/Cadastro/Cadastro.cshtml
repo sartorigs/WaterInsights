@@ -1,5 +1,100 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+<div class="row g-3 align-items-center">
+    <div class="col-md">
+        <label for="inputPassword" class="col-form-label">Nome</label>
+        <input type="text" id="inputPassword" class="form-control">
+    </div>
+    <div class="col-md">
+        <label for="sobrenome" class="col-form-label">Sobrenome</label>
+        <input type="text" id="sobrenome" class="form-control">
+    </div>   
+</div>
+<div class="row g-12 align-items-center">
+    <div class="col-md">
+        <label for="email" class="col-form-label">E-mail</label>
+        <input type="text" id="email" class="form-control">
+    </div>  
+</div>
+<div class="row g-2 align-items-center">
+    <div class="col-md">
+        <label for="data" class="col-form-label">Data Nascimento</label>
+        <div id="fds">
+            <input style="z-index: 0" type="date" id="data" class="form-control">
+            <img style="z-index: 4;position: absolute; top: 3.15rem; left: 68rem; cursor: pointer;" id="olho" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDUlEQVQ4jd2SvW3DMBBGbwQVKlyo4BGC4FKFS4+TATKCNxAggkeoSpHSRQbwAB7AA7hQoUKFLH6E2qQQHfgHdpo0yQHX8T3exyPR/ytlQ8kOhgV7FvSx9+xglA3lM3DBgh0LPn/onbJhcQ0bv2SHlgVgQa/suFHVkCg7bm5gzB2OyvjlDFdDcoa19etZMN8Qp7oUDPEM2KFV1ZAQO2zPMBERO7Ra4JQNpRa4K4FDS0R0IdneCbQLb4/zh/c7QdH4NL40tPXrovFpjHQr6PJ6yr5hQV80PiUiIm1OKxZ0LICS8TWvpyyOf2DBQQtcXk8Zi3+JcKfNafVsjZ0WfGgJlZZQxZjdwzX+ykf6u/UF0Fwo5Apfcq8AAAAASUVORK5CYII="/>
+        </div>     
+    </div>
+    <div class="col-md">
+        <label for="senha" class="col-form-label">Senha</label>
+        <input type="password" id="senha" class="form-control">
+    </div>
+</div>
+<div class="row g-2 align-items-center">
+    <div class="col-md">
+        <label for="cidade" class="col-form-label">Cidade</label>
+        <input type="text" id="cidade" class="form-control">
+    </div>
+    <div class="col-md">
+        <label for="bairro" class="col-form-label">Bairro</label>
+        <input type="text" id="bairro" class="form-control">
+    </div>   
+</div>
+<div class="row g-12">
+     <div style="margin-top: 10px" class="col-12">
+        <label for="estado" class="form-label">Estado</label>
+        <select class="form-control" id="estado" name="estado">
+            <option>Escolha...</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+            <option value="EX">Estrangeiro</option>
+        </select>
+    </div>
+</div>
+<div style="margin-top: 1rem; justify-content: space-between" class="row g-12">
+    <div class="col-auto">
+        <button type="reset" class="btn btn-danger">Resetar</button>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </div>
+</div>
+<script>
+    var senha = $('#senha');
+    var olho= $("#olho");
+
+    olho.mousedown(function() {
+      senha.attr("type", "text");
+    });
+
+    olho.mouseup(function() {
+      senha.attr("type", "password");
+    });
+    $( "#olho" ).mouseout(function() { 
+      $("#senha").attr("type", "password");
+    });
+</script>

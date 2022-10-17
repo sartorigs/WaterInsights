@@ -34,6 +34,38 @@ namespace Projeto_Aplicado.Migrations
                     b.ToTable("Categorias");
                 });
 
+            modelBuilder.Entity("Projeto_Aplicado.Entidades.PowerBi", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<long>("UsuarioId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("value1")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("value2")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("value3")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("value4")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("value5")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("PowerBis");
+                });
+
             modelBuilder.Entity("Projeto_Aplicado.Entidades.Projeto", b =>
                 {
                     b.Property<long>("Id")
@@ -66,6 +98,36 @@ namespace Projeto_Aplicado.Migrations
                     b.HasIndex("CategoriaId");
 
                     b.ToTable("Projetos");
+                });
+
+            modelBuilder.Entity("Projeto_Aplicado.Entidades.Regiao", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("Bairro")
+                        .HasMaxLength(80)
+                        .HasColumnType("character varying(80)");
+
+                    b.Property<string>("Cidade")
+                        .HasMaxLength(80)
+                        .HasColumnType("character varying(80)");
+
+                    b.Property<string>("Estado")
+                        .HasMaxLength(2)
+                        .HasColumnType("character varying(2)");
+
+                    b.Property<long>("UsuarioId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId")
+                        .IsUnique();
+
+                    b.ToTable("Regioes");
                 });
 
             modelBuilder.Entity("Projeto_Aplicado.Entidades.Usuario", b =>
@@ -129,6 +191,17 @@ namespace Projeto_Aplicado.Migrations
                     b.ToTable("UsuarioProjeto");
                 });
 
+            modelBuilder.Entity("Projeto_Aplicado.Entidades.PowerBi", b =>
+                {
+                    b.HasOne("Projeto_Aplicado.Entidades.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Usuario");
+                });
+
             modelBuilder.Entity("Projeto_Aplicado.Entidades.Projeto", b =>
                 {
                     b.HasOne("Projeto_Aplicado.Entidades.Categoria", "Categoria")
@@ -138,6 +211,17 @@ namespace Projeto_Aplicado.Migrations
                         .IsRequired();
 
                     b.Navigation("Categoria");
+                });
+
+            modelBuilder.Entity("Projeto_Aplicado.Entidades.Regiao", b =>
+                {
+                    b.HasOne("Projeto_Aplicado.Entidades.Usuario", "Usuario")
+                        .WithOne("Regiao")
+                        .HasForeignKey("Projeto_Aplicado.Entidades.Regiao", "UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("Projeto_Aplicado.Entidades.UsuarioProjeto", b =>
@@ -171,6 +255,8 @@ namespace Projeto_Aplicado.Migrations
 
             modelBuilder.Entity("Projeto_Aplicado.Entidades.Usuario", b =>
                 {
+                    b.Navigation("Regiao");
+
                     b.Navigation("UsuarioProjeto");
                 });
 #pragma warning restore 612, 618
