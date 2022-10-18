@@ -12,30 +12,30 @@
 <div class="row g-3 align-items-center">
     <div class="col-md">
         <label for="inputPassword" class="col-form-label">Nome</label>
-        <input type="text" id="inputPassword" class="form-control">
+        <input type="text" asp-for="Nome" id="inputPassword" class="form-control">
     </div>
     <div class="col-md">
         <label for="sobrenome" class="col-form-label">Sobrenome</label>
-        <input type="text" id="sobrenome" class="form-control">
+        <input type="text" asp-for="Sobrenome" id="sobrenome" class="form-control">
     </div>   
 </div>
 <div class="row g-12 align-items-center">
     <div class="col-md">
         <label for="email" class="col-form-label">E-mail</label>
-        <input type="text" id="email" class="form-control">
+        <input type="text" asp-for="Email" id="email" class="form-control">
     </div>  
 </div>
 <div class="row g-2 align-items-center">
     <div class="col-md">
         <label for="data" class="col-form-label">Data Nascimento</label>
         <div id="fds">
-            <input style="z-index: 0" type="date" id="data" class="form-control">
+            <input style="z-index: 0" type="date" asp-for="DataNascimento" id="data" class="form-control">
             <img style="z-index: 4;position: absolute; top: 3.15rem; left: 68rem; cursor: pointer;" id="olho" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDUlEQVQ4jd2SvW3DMBBGbwQVKlyo4BGC4FKFS4+TATKCNxAggkeoSpHSRQbwAB7AA7hQoUKFLH6E2qQQHfgHdpo0yQHX8T3exyPR/ytlQ8kOhgV7FvSx9+xglA3lM3DBgh0LPn/onbJhcQ0bv2SHlgVgQa/suFHVkCg7bm5gzB2OyvjlDFdDcoa19etZMN8Qp7oUDPEM2KFV1ZAQO2zPMBERO7Ra4JQNpRa4K4FDS0R0IdneCbQLb4/zh/c7QdH4NL40tPXrovFpjHQr6PJ6yr5hQV80PiUiIm1OKxZ0LICS8TWvpyyOf2DBQQtcXk8Zi3+JcKfNafVsjZ0WfGgJlZZQxZjdwzX+ykf6u/UF0Fwo5Apfcq8AAAAASUVORK5CYII="/>
         </div>     
     </div>
     <div class="col-md">
         <label for="senha" class="col-form-label">Senha</label>
-        <input type="password" id="senha" class="form-control">
+        <input type="password" asp-for="Senha" id="senha" class="form-control">
     </div>
 </div>
 <div class="row g-2 align-items-center">

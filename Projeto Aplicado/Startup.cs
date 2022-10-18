@@ -28,7 +28,7 @@ namespace Projeto_Aplicado
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            services.AddDbContext<AguaContext>(options => options.UseNpgsql("Server=localhost;Port=5432;Database=agua;User Id=postgres;Password=root;"));
+            services.AddDbContext<AguaContext>(options => options.UseNpgsql("Server=localhost;Port=5432;Database=agua;User Id=postgres;Password=masterkey;"));
 
             services.AddScoped<IProjetoRepository, ProjetoRepository>();
             services.AddScoped<IAcessoRepository, AcessoRepository>();

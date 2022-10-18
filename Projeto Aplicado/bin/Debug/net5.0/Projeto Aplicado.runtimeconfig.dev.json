@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\leona\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\leona\\.nuget\\packages"
+      "C:\\Users\\leonardo.bonavigo\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\leonardo.bonavigo\\.nuget\\packages"
     ]
   }
 }

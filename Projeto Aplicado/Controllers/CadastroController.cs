@@ -26,6 +26,10 @@ namespace Projeto_Aplicado.Controllers
                 {
                     Id = model.id,
                     Nome = model.Nome,
+                    Sobrenome = model.Sobrenome,
+                    Email = model.Email,
+                    Senha = model.Senha,
+                    DataNascimento = model.DataNascimento,
                     Regiao = new Regiao()
                     {
                         Id = model.id,
