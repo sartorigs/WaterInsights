@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leonardo.bonavigo\\Source\\Repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj": {}
+    "C:\\Users\\leonardo.bonavigo\\source\\repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leonardo.bonavigo\\Source\\Repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj": {
+    "C:\\Users\\leonardo.bonavigo\\source\\repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leonardo.bonavigo\\Source\\Repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
+        "projectUniqueName": "C:\\Users\\leonardo.bonavigo\\source\\repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
         "projectName": "Projeto Aplicado",
-        "projectPath": "C:\\Users\\leonardo.bonavigo\\Source\\Repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
+        "projectPath": "C:\\Users\\leonardo.bonavigo\\source\\repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
         "packagesPath": "C:\\Users\\leonardo.bonavigo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leonardo.bonavigo\\Source\\Repos\\projeto_agua\\Projeto Aplicado\\obj\\",
+        "outputPath": "C:\\Users\\leonardo.bonavigo\\source\\repos\\projeto_agua\\Projeto Aplicado\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\leonardo.bonavigo\\AppData\\Roaming\\NuGet\\NuGet.Config",

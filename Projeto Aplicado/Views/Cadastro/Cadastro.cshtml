@@ -41,17 +41,17 @@
 <div class="row g-2 align-items-center">
     <div class="col-md">
         <label for="cidade" class="col-form-label">Cidade</label>
-        <input type="text" id="cidade" class="form-control">
+        <input type="text" asp-for="Cidade" id="cidade" class="form-control">
     </div>
     <div class="col-md">
         <label for="bairro" class="col-form-label">Bairro</label>
-        <input type="text" id="bairro" class="form-control">
+        <input type="text" asp-for="Bairro" id="bairro" class="form-control">
     </div>   
 </div>
 <div class="row g-12">
      <div style="margin-top: 10px" class="col-12">
         <label for="estado" class="form-label">Estado</label>
-        <select class="form-control" id="estado" name="estado">
+        <select class="form-control" asp-for="Estado" id="estado" name="estado">
             <option>Escolha...</option>
             <option value="AC">Acre</option>
             <option value="AL">Alagoas</option>
