@@ -1,5 +1,16 @@
 ﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+@model Projeto_Aplicado.Models.UsuarioModel;
+<style>
+    label {
+        color:#FFFFFF;
+    }
+</style>
+<body style="background-color: #0D1117">
 
+</body>
+
+<form asp-controller="Cadastro" asp-action="Novo">
+  <input asp-for="id" type="hidden">
 <div class="row g-3 align-items-center">
     <div class="col-md">
         <label for="inputPassword" class="col-form-label">Nome</label>
@@ -76,13 +87,11 @@
     </div>
 </div>
 <div style="margin-top: 1rem; justify-content: space-between" class="row g-12">
-    <div class="col-auto">
-        <button type="reset" class="btn btn-danger">Resetar</button>
-    </div>
-    <div class="col-auto">
+    <div style="margin-left: 89%" class="col-auto">
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
 </div>
+</form>
 <script>
     var senha = $('#senha');
     var olho= $("#olho");

@@ -7,10 +7,10 @@ namespace Projeto_Aplicado.Controllers
 {
     public class CadastroController : Controller
     {
-        private readonly IProjetoRepository _projetoRepository;
-        public CadastroController(IProjetoRepository projetoRepository)
+        private readonly IAcessoRepository _acessoRepository;
+        public CadastroController(IAcessoRepository acessoRepository)
         {
-            _projetoRepository = projetoRepository;
+            _acessoRepository = acessoRepository;
         }
         public IActionResult Cadastro()
         {
@@ -34,7 +34,7 @@ namespace Projeto_Aplicado.Controllers
                         Estado = model.Estado
                     }
                 };
-                _projetoRepository.Cadastrar(usuario);
+                _acessoRepository.Cadastrar(usuario);
                 return RedirectToAction("Index", "Home");
             }
             return View(model);

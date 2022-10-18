@@ -31,6 +31,7 @@ namespace Projeto_Aplicado
             services.AddDbContext<AguaContext>(options => options.UseNpgsql("Server=localhost;Port=5432;Database=agua;User Id=postgres;Password=root;"));
 
             services.AddScoped<IProjetoRepository, ProjetoRepository>();
+            services.AddScoped<IAcessoRepository, AcessoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

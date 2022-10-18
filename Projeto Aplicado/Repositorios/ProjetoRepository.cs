@@ -15,18 +15,7 @@ namespace Projeto_Aplicado.Repositorios
         {
             _context = context;
         }
-        public void Cadastrar(Usuario usuario)
-        {
-            if (usuario.Id == 0)
-            {
-                _context.Usuarios.Add(usuario);
-            }
-            else
-            {
-                _context.Usuarios.Update(usuario);
-            }
-            _context.SaveChanges();
-        }
+        
 
         public void Salvar(Projeto projeto)
         {

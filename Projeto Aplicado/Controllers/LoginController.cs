@@ -6,10 +6,10 @@ namespace Projeto_Aplicado.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly IProjetoRepository _projetoRepository;
-        public LoginController(IProjetoRepository projetoRepository)
+        private readonly IAcessoRepository _acessoRepository;
+        public LoginController(IAcessoRepository acessoRepository)
         {
-            _projetoRepository = projetoRepository;
+            _acessoRepository = acessoRepository;
         }
         public IActionResult Login()
         {
