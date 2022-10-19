@@ -10,6 +10,27 @@
     form {
         margin-top:4.5%;
     }
+    .button-1 {
+      background: #066C8B;
+      border-radius: 999px;
+      box-shadow: #066C8B 0 10px 20px -10px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      opacity: 1;
+      outline: 0 solid transparent;
+      padding: 8px 18px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: fit-content;
+      word-break: break-word;
+      border: 0;
+    }
 </style>
 <body style="background-color: #0D1117"></body>
 
@@ -18,27 +39,27 @@
 <div class="row g-3 align-items-center">
     <div class="col-md">
         <label for="inputPassword" class="col-form-label">Nome</label>
-        <input type="text" asp-for="Nome" id="inputPassword" class="form-control">
+        <input type="text" asp-for="Nome" id="inputPassword" class="form-control" required>
     </div>
     <div class="col-md">
         <label for="sobrenome" class="col-form-label">Sobrenome</label>
-        <input type="text" asp-for="Sobrenome" id="sobrenome" class="form-control">
+        <input type="text" asp-for="Sobrenome" id="sobrenome" class="form-control" required>
     </div>   
 </div>
 <div class="row g-12 align-items-center">
     <div class="col-md">
         <label for="email" class="col-form-label">E-mail</label>
-        <input type="text" asp-for="Email" id="email" class="form-control">
+        <input type="text" asp-for="Email" id="email" class="form-control" required>
     </div>  
 </div>
 <div class="row g-2 align-items-center">
     <div class="col-md">
         <label for="dataNasc" class="col-form-label">Data Nascimento</label>
-        <input type="date" value="" asp-for="DataNascimento" id="dataNasc" class="form-control">   
+        <input type="date" value="" asp-for="DataNascimento" id="dataNasc" class="form-control" required>   
     </div>
     <div class="col-md">
         <label style="z-index: 0" for="senha" class="col-form-label">Senha</label>
-        <input type="password" asp-for="Senha" id="senha" class="form-control">
+        <input type="password" asp-for="Senha" id="senha" class="form-control" required>
         <img style="z-index: 4; position: relative; margin-top: -1.7em; float: right; margin-right: 3%;  cursor: pointer;" id="olho" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDUlEQVQ4jd2SvW3DMBBGbwQVKlyo4BGC4FKFS4+TATKCNxAggkeoSpHSRQbwAB7AA7hQoUKFLH6E2qQQHfgHdpo0yQHX8T3exyPR/ytlQ8kOhgV7FvSx9+xglA3lM3DBgh0LPn/onbJhcQ0bv2SHlgVgQa/suFHVkCg7bm5gzB2OyvjlDFdDcoa19etZMN8Qp7oUDPEM2KFV1ZAQO2zPMBERO7Ra4JQNpRa4K4FDS0R0IdneCbQLb4/zh/c7QdH4NL40tPXrovFpjHQr6PJ6yr5hQV80PiUiIm1OKxZ0LICS8TWvpyyOf2DBQQtcXk8Zi3+JcKfNafVsjZ0WfGgJlZZQxZjdwzX+ykf6u/UF0Fwo5Apfcq8AAAAASUVORK5CYII="/>
     </div>
 </div>
@@ -90,7 +111,7 @@
 </div>
 <div style="margin-top: 2rem; justify-content: space-between" class="row g-12">
     <div class="col-12">
-        <button style=" width: 100%; margin-right 10%; position: relative; float: right;" type="submit" class="btn btn-primary">Cadastrar</button>
+        <button style=" width: 100%; margin-right 10%; position: relative; float: right;" type="submit" class="button-1">Cadastrar</button>
     </div>
 </div>
 </form>
