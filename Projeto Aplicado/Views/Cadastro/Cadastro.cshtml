@@ -4,6 +4,12 @@
     label {
         color:#FFFFFF;
     }
+    html {
+        max-width:auto;
+    }
+    form {
+        margin-top:4.5%;
+    }
 </style>
 <body style="background-color: #0D1117"></body>
 
@@ -27,15 +33,13 @@
 </div>
 <div class="row g-2 align-items-center">
     <div class="col-md">
-        <label for="data" class="col-form-label">Data Nascimento</label>
-        <div id="fds">
-            <input style="z-index: 0" type="date" asp-for="DataNascimento" id="data" class="form-control">
-            <img style="z-index: 4;position: absolute; top: 3.15rem; left: 68rem; cursor: pointer;" id="olho" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDUlEQVQ4jd2SvW3DMBBGbwQVKlyo4BGC4FKFS4+TATKCNxAggkeoSpHSRQbwAB7AA7hQoUKFLH6E2qQQHfgHdpo0yQHX8T3exyPR/ytlQ8kOhgV7FvSx9+xglA3lM3DBgh0LPn/onbJhcQ0bv2SHlgVgQa/suFHVkCg7bm5gzB2OyvjlDFdDcoa19etZMN8Qp7oUDPEM2KFV1ZAQO2zPMBERO7Ra4JQNpRa4K4FDS0R0IdneCbQLb4/zh/c7QdH4NL40tPXrovFpjHQr6PJ6yr5hQV80PiUiIm1OKxZ0LICS8TWvpyyOf2DBQQtcXk8Zi3+JcKfNafVsjZ0WfGgJlZZQxZjdwzX+ykf6u/UF0Fwo5Apfcq8AAAAASUVORK5CYII="/>
-        </div>     
+        <label for="dataNasc" class="col-form-label">Data Nascimento</label>
+        <input type="date" value="" asp-for="DataNascimento" id="dataNasc" class="form-control">   
     </div>
     <div class="col-md">
-        <label for="senha" class="col-form-label">Senha</label>
+        <label style="z-index: 0" for="senha" class="col-form-label">Senha</label>
         <input type="password" asp-for="Senha" id="senha" class="form-control">
+        <img style="z-index: 4; position: relative; margin-top: -1.7em; float: right; margin-right: 3%;  cursor: pointer;" id="olho" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDUlEQVQ4jd2SvW3DMBBGbwQVKlyo4BGC4FKFS4+TATKCNxAggkeoSpHSRQbwAB7AA7hQoUKFLH6E2qQQHfgHdpo0yQHX8T3exyPR/ytlQ8kOhgV7FvSx9+xglA3lM3DBgh0LPn/onbJhcQ0bv2SHlgVgQa/suFHVkCg7bm5gzB2OyvjlDFdDcoa19etZMN8Qp7oUDPEM2KFV1ZAQO2zPMBERO7Ra4JQNpRa4K4FDS0R0IdneCbQLb4/zh/c7QdH4NL40tPXrovFpjHQr6PJ6yr5hQV80PiUiIm1OKxZ0LICS8TWvpyyOf2DBQQtcXk8Zi3+JcKfNafVsjZ0WfGgJlZZQxZjdwzX+ykf6u/UF0Fwo5Apfcq8AAAAASUVORK5CYII="/>
     </div>
 </div>
 <div class="row g-2 align-items-center">
@@ -84,9 +88,9 @@
         </select>
     </div>
 </div>
-<div style="margin-top: 1rem; justify-content: space-between" class="row g-12">
-    <div style="margin-left: 89%" class="col-auto">
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
+<div style="margin-top: 2rem; justify-content: space-between" class="row g-12">
+    <div class="col-12">
+        <button style=" width: 100%; margin-right 10%; position: relative; float: right;" type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
 </div>
 </form>

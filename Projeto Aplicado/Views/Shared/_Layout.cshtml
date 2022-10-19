@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<style>
+#bordaCima {
+    box-shadow: 0 3px 10px rgb(100, 100, 255, 0.5)!important;
+}
+#bordaBaixo {
+    box-shadow: 0 -3px 10px rgb(100, 100, 255, 0.5)!important;
+}
+</style>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -9,7 +18,7 @@
 </head>
 <body>
     <header>
-        <nav style="background-color: #161B22" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3">
+        <nav style="background-color: #161B22" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" id="bordaCima">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Projeto_Agua</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -35,8 +44,8 @@
         </main>
     </div>
 
-    <footer style="background-color: #161B22" class="border-top footer text-muted">
-        <div class="container">
+    <footer style="background-color: #161B22" class="footer text-muted" id="bordaBaixo">
+        <div style="color: #FFFFFF" class="container">
             &copy; 2022 - Projeto_Aplicado - <a asp-area="" asp-controller="Home" asp-action="Privacy">Criadores</a>
         </div>
     </footer>

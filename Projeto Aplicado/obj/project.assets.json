@@ -1509,19 +1509,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leonardo.bonavigo\\.nuget\\packages\\": {}
+    "C:\\Users\\leona\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leonardo.bonavigo\\Source\\Repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
+      "projectUniqueName": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
       "projectName": "Projeto Aplicado",
-      "projectPath": "C:\\Users\\leonardo.bonavigo\\Source\\Repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
-      "packagesPath": "C:\\Users\\leonardo.bonavigo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leonardo.bonavigo\\Source\\Repos\\projeto_agua\\Projeto Aplicado\\obj\\",
+      "projectPath": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
+      "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\leonardo.bonavigo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1529,8 +1529,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/UJhJOKkskK5HlUIXsauXW16mOZFgi5WEhdNIkeVOa6JXJsgewi/api": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
@@ -1585,7 +1584,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
