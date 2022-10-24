@@ -1,13 +1,14 @@
 ﻿<style> 
 #bordaCima {
-    box-shadow: 0 3px 10px rgb(0, 200, 255, 0.5)!important;
+    box-shadow: 0 3px 10px rgba(0, 200, 255, 0.5)!important;
 }
 .waves {
   position:relative;
   width: 100%;
-  height:14vh;
+  height:10vh;
   margin-bottom:-22em; /*Fix for safari gap*/
-  min-height:100px;
+  margin-top:2em;
+  min-height:50px;
   max-height:150px;
 }
 
@@ -40,6 +41,41 @@
     transform: translate3d(85px,0,0);
   }
 }
+.cup {
+  float: left;
+  margin-left: -10%;
+  position: absolute;
+  width: 150px;
+  height: 180px;
+  border: 6px solid #262626;
+  border-top: 2px solid transparent;
+  border-radius: 15px;
+  transform: scale(0.2);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: url(https://image.ibb.co/fmHm66/wave.png);
+  background-position: 0px 350px;
+  background-repeat: repeat-x;
+  animation: filling 10s ease-in-out infinite;
+  box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
+}
+
+.cup:before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  border: 6px solid #fff;
+  right: -57px;
+  top: 30px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+@@keyframes filling {
+  50% {background-position: 3000px 0px;}
+  100% {background-position: 6000px 350px;}
+}
 </style>
 
 <!DOCTYPE html>
@@ -55,6 +91,7 @@
     <header>
         <nav style="background-color: #161B22" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" id="bordaCima">
             <div class="container">
+                <div class="cup"></div>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Projeto_Agua</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -87,10 +124,10 @@
             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(33, 113, 180, 0.7)" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(33, 113, 180, 0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(33, 113, 180, 0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(33, 113, 180, 1)" />
             </g>
             </svg>
         </div>
