@@ -826,3 +826,4 @@ C:\Users\leonardo.bonavigo\Source\Repos\projeto_agua\Projeto Aplicado\obj\Debug\
 C:\Users\leonardo.bonavigo\Source\Repos\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.csproj.CopyComplete
 C:\Users\leonardo.bonavigo\Source\Repos\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\Projeto Aplicado.genruntimeconfig.cache
 C:\Users\leona\Desktop\Codes\ProjetoAgua\projeto_agua\Projeto Aplicado\bin\Debug\net5.0\Projeto Aplicado.StaticWebAssets.xml
+C:\Users\leona\Desktop\Codes\ProjetoAgua\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\FormularioPowerBi\FormularioPowerBi.cshtml.g.cs
