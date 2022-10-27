@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj": {}
+    "C:\\Users\\Gabriel\\source\\repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj": {
+    "C:\\Users\\Gabriel\\source\\repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
+        "projectUniqueName": "C:\\Users\\Gabriel\\source\\repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
         "projectName": "Projeto Aplicado",
-        "projectPath": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
-        "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\obj\\",
+        "projectPath": "C:\\Users\\Gabriel\\source\\repos\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
+        "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gabriel\\source\\repos\\projeto_agua\\Projeto Aplicado\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

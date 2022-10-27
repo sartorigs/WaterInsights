@@ -6,6 +6,6 @@ namespace Projeto_Aplicado.Repositorios.Interfaces
     {
         void Cadastrar(Usuario usuario);
 
-        bool Acessa(Usuario usuario, string email, string senha);
+        bool Acessa(Usuario usuario);
     }
 }

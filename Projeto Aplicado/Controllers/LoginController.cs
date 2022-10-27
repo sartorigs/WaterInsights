@@ -17,10 +17,18 @@ namespace Projeto_Aplicado.Controllers
             var model = new UsuarioModel();
             return View(model);
         }
-        //public IActionResult Acessar(Usuario model, string email, string senha)
-        //{
-        //    _acessoRepository.Acessa(model, email, senha, out a);
-        //    return RedirectToAction("Index", "Home");
-        //}
+        public IActionResult Acessar(Usuario model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new Usuario();
+                user.Email = model.Email;
+                user.Senha = model.Senha;
+                if (_acessoRepository.Acessa(user))
+                    return RedirectToAction("Index", "Home");
+            }
+
+            return View("Teste","Home");
+        }
     }
 }
