@@ -17,7 +17,7 @@ namespace Projeto_Aplicado.Controllers
             var model = new UsuarioModel();
             return View(model);
         }
-        public IActionResult Acessar(Usuario model)
+        public IActionResult Acessar(UsuarioModel model)
         {
             if (ModelState.IsValid)
             {
@@ -27,8 +27,8 @@ namespace Projeto_Aplicado.Controllers
                 if (_acessoRepository.Acessa(user))
                     return RedirectToAction("Index", "Home");
             }
-
-            return View("Teste","Home");
+            ViewBag.Message1 = "Acesso Negado!!!";
+            return View("Login", model);
         }
     }
 }
