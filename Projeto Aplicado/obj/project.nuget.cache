@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bmGHbHgIjvABnaVOefabsBzckn2SX/NS+qS5UuL47JU48KzLH7WRXBNYC3ehUs90pNdwAiwZ5f2X/440gNT43Q==",
+  "dgSpecHash": "W81+HCO20Ci8Isz8i1YYTponJkjLYnPwr6ZqsC9VeLdRqf9WXmxW5oGySQ4YpLE20bhRkVMBJ+kg0eF7HD4iww==",
   "success": true,
-  "projectFilePath": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
+  "projectFilePath": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\Projeto2.0\\Projeto Aplicado\\Projeto Aplicado.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leona\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\leona\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.17\\microsoft.aspnetcore.mvc.razor.extensions.5.0.17.nupkg.sha512",

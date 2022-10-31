@@ -1,48 +1,157 @@
 ﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.all.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+
+@model Projeto_Aplicado.Models.UsuarioModel;
+@{
+    ViewBag.Title = "Login";
+}
 
 <style>
-    label {
-        color:#FFFFFF;
+    .swa12-timer-progress-bar {
+        color: #FFFFFF!important;
+        background: #FFFFFF!important;
     }
-</style>
-<body style="background-color: #0D1117"></body>
 
-<div style="position: relative">
-    <div style="height 800px;width: 800px;position: absolute;top: 50%;left: 50%;margin: +150px 0 0 -230px;">
-        <div class="row g-1 align-items-center">
-            <div class="col-7">
-                <label for="email" class="col-form-label">E-mail</label>
-                <input type="email" id="email" class="form-control"> 
-            </div>   
-        </div>
-        <div class="row g-1 align-items-center">
-            <div class="col-7">
-                <label for="senha" class="col-form-label">Senha</label>
-                <input type="password" id="senha" class="form-control">
+    label {
+        color: #FFFFFF;
+    }
+
+    .button-3 {
+        background: #066C8B;
+        border-radius: 999px;
+        box-shadow: #066C8B 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: rgba(255,255,255, 1);
+        cursor: pointer;
+        text-align: center;
+        font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: fit-content;
+        word-break: break-word;
+        border: 0;
+    }
+
+
+        .button-3:hover {
+            color: rgba(255,255,255, 1);
+            text-decoration: 0;
+            transform: scale(1.02);
+        }
+
+
+    .button-2 {
+        background: #066C8B;
+        border-radius: 999px;
+        box-shadow: #066C8B 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: rgba(255,255,255, 1);
+        cursor: pointer;
+        font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: fit-content;
+        word-break: break-word;
+        border: 0;
+    }
+
+
+        .button-2:hover {
+            transform: scale(1.02);
+        }
+</style>
+
+<body style="background-color: #0D1117">
+
+</body>
+<form asp-controller="Login" asp-action="Acessar">
+    <div style="position: relative">
+        <div style="height 800px;width: 800px;position: absolute;top: 50%;left: 50%;margin: +150px 0 0 -230px;">
+            <div class="row g-1 align-items-center">
+                <div class="col-7">
+                    <label for="email" class="col-form-label">E-mail</label>
+                    <input type="email" id="email" class="form-control" asp-for="Email">
+                </div>
+
             </div>
-        </div>
-        <div style="margin-top: 2rem; justify-content:space-between" class="row g-1">
-            <div class="col-7">
-                <a style="width: 110px" href="../Cadastro/Cadastro" type="submit" class="btn btn-danger">Criar Conta</a>
-                <button style="width: 110px; float: right" type="submit" class="btn btn-primary">Cadastrar</button>
+            <div class="row g-1 align-items-center">
+                <div class="col-7">
+                    <label for="senha" class="col-form-label">Senha</label>
+                    <input type="password" id="senha" class="form-control" asp-for="Senha">
+                </div>
+            </div>
+            <div style="margin-top: 2rem; justify-content:space-between" class="row g-7">
+                <div class="col-7">
+                    <button style="width: 100%; margin-right 10%; position: relative; float: right;" type="submit" class="button-2">Entrar</button>
+                </div>
+            </div>
+            <div style="margin-top: 2rem; justify-content:space-between" class="row g-7">
+                <div class="col-7">
+                    <a style="width: 100%; margin-right 10%; position: relative; float: right;" href="../Cadastro/Cadastro" type="submit" class="button-3">Criar Conta</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <input type="text" value="a" hidden="true" asp-for="Nome" />
+    <input type="text" value="b" hidden="true" asp-for="Sobrenome" />
+</form>
 
 
-<script>
+
+<script type="text/javascript" lang="javascript">
     var senha = $('#senha');
-    var olho= $("#olho");
+    var olho = $("#olho");
 
     olho.mousedown(function() {
-      senha.attr("type", "text");
+        senha.attr("type", "text");
     });
 
     olho.mouseup(function() {
-      senha.attr("type", "password");
+        senha.attr("type", "password");
     });
-    $( "#olho" ).mouseout(function() { 
-      $("#senha").attr("type", "password");
+    $("#olho").mouseout(function() {
+        $("#senha").attr("type", "password");
     });
 </script>
+
+@if (@ViewBag.Message1 != null)
+{
+    <script type="text/javascript" lang="javascript">
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            background: 'red',
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+        Toast.fire({
+            icon: 'error',
+            iconColor: '#fff',
+            color: '#fff',
+            title: '@ViewBag.Message1'
+        })
+
+    </script>
+}

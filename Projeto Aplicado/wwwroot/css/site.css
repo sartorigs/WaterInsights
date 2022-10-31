@@ -35,6 +35,11 @@ html {
   }
 }
 
+a::selection{
+    background: #fff;
+    color:aqua;
+}
+
 button.accept-policy {
   font-size: 1rem;
   line-height: inherit;

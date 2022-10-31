@@ -27,5 +27,11 @@ namespace Projeto_Aplicado.Repositorios
             }
             _context.SaveChanges();
         }
+        public bool Acessa(Usuario usuario) {
+            var login = _context.Usuarios.FirstOrDefault(e => e.Email.Equals(usuario.Email) && e.Senha.Equals(usuario.Senha));
+            if (login == null)
+                return false;
+            return true;
+        }
     }
 }

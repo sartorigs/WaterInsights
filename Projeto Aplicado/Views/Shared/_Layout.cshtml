@@ -1,45 +1,92 @@
-﻿<style> 
-#bordaCima {
-    box-shadow: 0 3px 10px rgb(0, 200, 255, 0.5)!important;
-}
-.waves {
-  position:relative;
-  width: 100%;
-  height:14vh;
-  margin-bottom:-22em; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
-}
+﻿<style>
+    #bordaCima {
+        box-shadow: 0 3px 10px rgba(0, 200, 255, 0.5) !important;
+    }
 
-/* Animation */
+    .waves {
+        position: relative;
+        width: 100%;
+        height: 10vh; /*Fix for safari gap*/
+        margin-top: 2em;
+        min-height: 50px;
+        max-height: 150px;
+    }
+    /* Animation */
 
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@@keyframes move-forever {
-  0% {
-   transform: translate3d(-90px,0,0);
-  }
-  100% { 
-    transform: translate3d(85px,0,0);
-  }
-}
+    .parallax > use {
+        animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    }
+
+        .parallax > use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+
+        .parallax > use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+
+        .parallax > use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+
+        .parallax > use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+
+    @@keyframes move-forever {
+        0% {
+            transform: translate3d(-90px,0,0);
+        }
+
+        100% {
+            transform: translate3d(85px,0,0);
+        }
+    }
+
+    .cup {
+        float: left;
+        margin-left: -10%;
+        position: absolute;
+        width: 150px;
+        height: 180px;
+        border: 6px solid #262626;
+        border-top: 2px solid transparent;
+        border-radius: 15px;
+        transform: scale(0.2);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background: url(https://image.ibb.co/fmHm66/wave.png);
+        background-position: 0px 350px;
+        background-repeat: repeat-x;
+        animation: filling 10s ease-in-out infinite;
+        box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
+    }
+
+        .cup:before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            border: 6px solid #fff;
+            right: -57px;
+            top: 30px;
+            border-top-right-radius: 35px;
+            border-bottom-right-radius: 35px;
+        }
+
+    @@keyframes filling {
+        50% {
+            background-position: 3000px 0px;
+        }
+
+        100% {
+            background-position: 6000px 350px;
+        }
+    }
 </style>
 
 <!DOCTYPE html>
@@ -55,18 +102,18 @@
     <header>
         <nav style="background-color: #161B22" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" id="bordaCima">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Projeto_Agua</a>
+                <a href="/Home/Index"><div style="margin-top: -90px" class="cup"></div></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        <li style="margin-left: 40px" class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Cadastro" asp-action="Cadastro">Cadastro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Login" asp-action="Login">Login</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="FormularioPowerBi" asp-action="FormularioPowerBi">Pesquisa sobre sua água!</a>
                         </li>
                     </ul>
                 </div>
@@ -79,19 +126,19 @@
         </main>
     </div>
 
-    <footer >
+    <footer style="position: absolute; bottom: 0px; right: 0; left: 0">
         <div>
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs>
-            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-            </defs>
-            <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-            </g>
+                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(33, 113, 180, 0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(33, 113, 180, 0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(33, 113, 180, 0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(33, 113, 180, 1)" />
+                </g>
             </svg>
         </div>
     </footer>

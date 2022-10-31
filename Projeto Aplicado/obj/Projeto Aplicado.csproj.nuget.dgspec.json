@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj": {}
+    "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\Projeto2.0\\Projeto Aplicado\\Projeto Aplicado.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj": {
+    "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\Projeto2.0\\Projeto Aplicado\\Projeto Aplicado.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
+        "projectUniqueName": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\Projeto2.0\\Projeto Aplicado\\Projeto Aplicado.csproj",
         "projectName": "Projeto Aplicado",
-        "projectPath": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\Projeto Aplicado.csproj",
+        "projectPath": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\Projeto2.0\\Projeto Aplicado\\Projeto Aplicado.csproj",
         "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\projeto_agua\\Projeto Aplicado\\obj\\",
+        "outputPath": "C:\\Users\\leona\\Desktop\\Codes\\ProjetoAgua\\Projeto2.0\\Projeto Aplicado\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config",

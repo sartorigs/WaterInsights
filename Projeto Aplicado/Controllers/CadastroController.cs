@@ -42,6 +42,6 @@ namespace Projeto_Aplicado.Controllers
                 return RedirectToAction("Index", "Home");
             }
             return View(model);
-        }
+        } 
     }
 }

@@ -6,6 +6,7 @@ namespace Projeto_Aplicado.Models
     public class UsuarioModel
     {
         public long id { get; set; }
+        public object Id { get; internal set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public DateTime DataNascimento { get; set; }
