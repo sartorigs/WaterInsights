@@ -1,0 +1,28 @@
+﻿@model ProjetoModel
+
+<form asp-action="Novo" enctype="multipart/form-data">
+    <input type="number" hidden="true" asp-for="@Model.Id" value="0" />
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Titulo</label>
+            <input type="text" class="form-control" asp-for="@Model.Titulo" id="inputAddress" placeholder="Titulo">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">Descrição</label>
+            <input type="text" asp-for="@Model.Descricao class=" form-control" id="inputAddress2" placeholder="Descrição">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">Items</label>
+                <input type="text" class="form-control" asp-for="@Model.Itens" id="inputCity">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Imagem</label>
+            <input type="file" asp-for="@Model.Imagem" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

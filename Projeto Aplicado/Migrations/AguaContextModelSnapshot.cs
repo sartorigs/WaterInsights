@@ -19,21 +19,6 @@ namespace Projeto_Aplicado.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-            modelBuilder.Entity("Projeto_Aplicado.Entidades.Categoria", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
-
-                    b.Property<int>("DefinicaoCategoria")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categorias");
-                });
-
             modelBuilder.Entity("Projeto_Aplicado.Entidades.PowerBi", b =>
                 {
                     b.Property<long>("Id")
@@ -73,9 +58,6 @@ namespace Projeto_Aplicado.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<long>("CategoriaId")
-                        .HasColumnType("bigint");
-
                     b.Property<string>("Descricao")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -94,8 +76,6 @@ namespace Projeto_Aplicado.Migrations
                         .HasColumnType("character varying(45)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CategoriaId");
 
                     b.ToTable("Projetos");
                 });
@@ -202,17 +182,6 @@ namespace Projeto_Aplicado.Migrations
                     b.Navigation("Usuario");
                 });
 
-            modelBuilder.Entity("Projeto_Aplicado.Entidades.Projeto", b =>
-                {
-                    b.HasOne("Projeto_Aplicado.Entidades.Categoria", "Categoria")
-                        .WithMany("Projetos")
-                        .HasForeignKey("CategoriaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Categoria");
-                });
-
             modelBuilder.Entity("Projeto_Aplicado.Entidades.Regiao", b =>
                 {
                     b.HasOne("Projeto_Aplicado.Entidades.Usuario", "Usuario")
@@ -241,11 +210,6 @@ namespace Projeto_Aplicado.Migrations
                     b.Navigation("Projeto");
 
                     b.Navigation("Usuario");
-                });
-
-            modelBuilder.Entity("Projeto_Aplicado.Entidades.Categoria", b =>
-                {
-                    b.Navigation("Projetos");
                 });
 
             modelBuilder.Entity("Projeto_Aplicado.Entidades.Projeto", b =>

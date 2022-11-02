@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Projeto Aplicado",
+    "\\Projeto Aplicado\\Controllers"
   ],
-  "SelectedNode": "\\Projeto Aplicado.sln",
+  "SelectedNode": "\\Projeto Aplicado\\Controllers\\FormularioPowerBiController.cs",
   "PreviewInSolutionExplorer": false
 }

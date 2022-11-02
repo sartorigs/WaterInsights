@@ -28,10 +28,11 @@ namespace Projeto_Aplicado
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            services.AddDbContext<AguaContext>(options => options.UseNpgsql("Server=localhost;Port=5432;Database=agua;User Id=postgres;Password=12345678;")); // Leo - 12345678 // Sartori - root
+            services.AddDbContext<AguaContext>(options => options.UseNpgsql("Server=localhost;Port=5432;Database=agua;User Id=postgres;Password=root;")); // Leo - 12345678 // Sartori - root
 
             services.AddScoped<IProjetoRepository, ProjetoRepository>();
             services.AddScoped<IAcessoRepository, AcessoRepository>();
+            services.AddScoped<IPowerBiRepository, PowerBiRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

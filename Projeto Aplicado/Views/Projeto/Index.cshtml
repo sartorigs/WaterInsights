@@ -1,0 +1,31 @@
+﻿@using Projeto_Aplicado.Entidades
+@{
+    var projetos = ViewBag.Projetos as List<Projeto>;
+}
+
+<div class="row">
+    <div class="col-12">
+        <a type="button" asp-action="Novo" asp-controller="Projeto" class="btn btn-primary float-right">Criar Projeto</a>
+    </div>
+</div>
+<br />
+@{
+    foreach (var prj in projetos)
+    {
+        <div>
+            <p>@prj.Titulo <p />
+        </div>
+
+        <div>
+            <img src="@prj.Imagem" width="400" height="400" />
+        </div>
+
+        <div>
+            <p>@prj.Descricao <p />
+        </div>
+        <div>
+            <p>@prj.Itens <p />
+        </div>
+
+    }
+}

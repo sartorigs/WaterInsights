@@ -12,8 +12,6 @@ namespace Projeto_Aplicado.Entidades
         [MaxLength(255)]
         public string Itens { get; set; }
         public string Imagem { get; set; }
-        public long CategoriaId { get; set; }
-        public Categoria Categoria { get; set; }
         public List<UsuarioProjeto> UsuarioProjeto { get; set; }
 
     }

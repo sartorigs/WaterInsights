@@ -28,12 +28,12 @@ namespace Projeto_Aplicado.Repositorios
 
         public List<Projeto> BuscarTodosProjetos()
         {
-            return _context.Projetos.Include(p => p.Categoria).ToList();
+            return _context.Projetos.ToList();
         }
 
         public Projeto BuscarProjetoPorId(long id)
         {
-            return _context.Projetos.Include(c => c.Categoria).Where(c => c.Id == id).FirstOrDefault();
+            return _context.Projetos.Where(c => c.Id == id).FirstOrDefault();
         }
 
         public void Excluir(Projeto projeto)
