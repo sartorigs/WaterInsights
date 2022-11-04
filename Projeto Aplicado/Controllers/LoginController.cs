@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Projeto_Aplicado.Entidades;
 using Projeto_Aplicado.Models;
 using Projeto_Aplicado.Repositorios.Interfaces;
@@ -25,7 +27,12 @@ namespace Projeto_Aplicado.Controllers
                 user.Email = model.Email;
                 user.Senha = model.Senha;
                 if (_acessoRepository.Acessa(user))
-                    return RedirectToAction("Index", "Home");
+                {
+                    var usuario = new Usuario() { Id = user.Id};
+                    HttpContext.Session.SetString("SessionUser", JsonConvert.SerializeObject(usuario));
+;                    return RedirectToAction("Index", "Home");
+                }
+                    
             }
             ViewBag.Message1 = "Acesso Negado!!!";
             return View("Login", model);

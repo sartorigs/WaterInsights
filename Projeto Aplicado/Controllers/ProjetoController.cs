@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Projeto_Aplicado.Entidades;
 using Projeto_Aplicado.Models;
 using Projeto_Aplicado.Repositorios.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Projeto_Aplicado.Controllers
@@ -16,6 +19,16 @@ namespace Projeto_Aplicado.Controllers
         }
         public IActionResult Index()
         {
+            try
+            {
+                var sessionUser = JsonConvert.DeserializeObject<Usuario>(HttpContext?.Session.GetString("SessionUser"));
+            }catch(Exception e)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            
+            
+                
             ViewBag.Projetos = _projetoRepository.BuscarTodosProjetos();
             return View();
         }
@@ -36,21 +49,32 @@ namespace Projeto_Aplicado.Controllers
                 projeto.Descricao = model.Descricao;
                 projeto.Itens = model.Itens;
                 projeto.Titulo = model.Titulo;
-                foreach (var file in model.Imagem)
-                {
-                    using (var ms = new MemoryStream())
-                    {
-                        file.CopyTo(ms);
-                        var filebytes = ms.ToArray();
-                        projeto.Imagem = Convert.ToBase64String(filebytes);
-                        projeto.Imagem = "data:image/png;base64," + projeto.Imagem;
-                    }
-                }
+                projeto.Imagem = conversorImagem(model.Imagem);
+
                 _projetoRepository.Salvar(projeto);
                 return RedirectToAction("Index");
             }
             return View(model);
         }
+
+
+        public string conversorImagem(List<IFormFile> img)
+        {
+            string retorno;
+            foreach (var file in img)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    file.CopyTo(ms);
+                    var filebytes = ms.ToArray();
+                    retorno = Convert.ToBase64String(filebytes);
+                    retorno = "data:image/png;base64," + retorno;
+                }
+                return retorno;
+            }
+            return null;
+        }
+
     }
 }
 

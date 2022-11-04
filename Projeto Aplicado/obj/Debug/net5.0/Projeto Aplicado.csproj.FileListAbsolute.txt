@@ -1934,3 +1934,10 @@ C:\Users\Gabriel\Source\Repos\sartorigs\projeto_agua\Projeto Aplicado\obj\Debug\
 C:\Users\Gabriel\Source\Repos\sartorigs\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\ref\Projeto Aplicado.dll
 C:\Users\Gabriel\Source\Repos\sartorigs\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\Projeto\Index.cshtml.g.cs
 C:\Users\Gabriel\Source\Repos\sartorigs\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\Projeto\Novo.cshtml.g.cs
+C:\Users\Gabriel\source\repos\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\FormularioPowerBi\FormularioPowerBi2.cshtml.g.cs
+C:\Users\Gabriel\source\repos\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\FormularioPowerBi\FormularioPowerBi3.cshtml.g.cs
+C:\Users\Gabriel\source\repos\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\FormularioPowerBi\FormularioPowerBi4.cshtml.g.cs
+C:\Users\Gabriel\source\repos\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\FormularioPowerBi\FormularioPowerBi5.cshtml.g.cs
+C:\Users\Gabriel\source\repos\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\Projeto\Index.cshtml.g.cs
+C:\Users\Gabriel\source\repos\projeto_agua\Projeto Aplicado\obj\Debug\net5.0\Razor\Views\Projeto\Novo.cshtml.g.cs
+C:\Users\Gabriel\source\repos\projeto_agua\Projeto Aplicado\bin\Debug\net5.0\Newtonsoft.Json.dll

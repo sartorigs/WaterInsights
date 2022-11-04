@@ -11,6 +11,6 @@ namespace Projeto_Aplicado.Models
         public string Descricao { get; set; }
         public string Itens { get; set; }
         public List<IFormFile> Imagem { get; set; }
-        //public UsuarioProjeto UsuarioProjeto { get; set; }
+        public long UsuarioId { get; set; }
     }
 }

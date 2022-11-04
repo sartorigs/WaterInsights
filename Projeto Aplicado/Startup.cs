@@ -33,6 +33,13 @@ namespace Projeto_Aplicado
             services.AddScoped<IProjetoRepository, ProjetoRepository>();
             services.AddScoped<IAcessoRepository, AcessoRepository>();
             services.AddScoped<IPowerBiRepository, PowerBiRepository>();
+
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(op =>
+            {
+                op.IdleTimeout = TimeSpan.FromSeconds(1800);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +60,11 @@ namespace Projeto_Aplicado
 
             app.UseRouting();
 
+            app.UseSession();
+
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
