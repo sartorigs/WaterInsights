@@ -3,29 +3,69 @@
     var projetos = ViewBag.Projetos as List<Projeto>;
 }
 
+<style>
+    p {
+        color: white;
+    }
+
+    .btn {
+        margin-top: 30px;   
+        background: #066C8B;
+        border-radius: 999px;
+        box-shadow: #066C8B 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: rgba(255,255,255, 1);
+        cursor: pointer;
+        font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: fit-content;
+        word-break: break-word;
+        border: 0;
+    }
+
+        .btn:hover {
+            background: #066C8B;
+            transform: scale(1.02);
+        }
+</style>
+
+<body style="background-color: #0D1117" />
+
 <div class="row">
     <div class="col-12">
         <a type="button" asp-action="Novo" asp-controller="Projeto" class="btn btn-primary float-right">Criar Projeto</a>
     </div>
 </div>
 <br />
-@{
-    foreach (var prj in projetos)
-    {
-        <div>
-            <p>@prj.Titulo <p />
-        </div>
+<div class="telaProjetos">
+    @{
+        foreach (var prj in projetos)
+        {
+                <div class="projeto">
+                    <div class="titulo">
+                        <p>@prj.Titulo <p />
+                    </div>
 
-        <div>
-            <img src="@prj.Imagem" width="400" height="400" />
-        </div>
+                    <div class="imagem">
+                        <img src="@prj.Imagem" width="400" height="400" />
+                    </div>
 
-        <div>
-            <p>@prj.Descricao <p />
-        </div>
-        <div>
-            <p>@prj.Itens <p />
-        </div>
+                    <div class="descricao">
+                        <p>@prj.Descricao <p />
+                    </div>
 
+                    <div class="itens">
+                        <p>@prj.Itens <p />
+                    </div>
+                </div>
+        }
     }
-}
+</div>
