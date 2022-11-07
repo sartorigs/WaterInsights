@@ -9,7 +9,7 @@
     }
 
     .btn {
-        margin-top: 30px;   
+        margin-top: 30px;
         background: #066C8B;
         border-radius: 999px;
         box-shadow: #066C8B 0 10px 20px -10px;
@@ -35,6 +35,11 @@
             background: #066C8B;
             transform: scale(1.02);
         }
+
+    .projeto {
+        border: 3px solid #066C8B;
+        border-radius: 5%;
+    }
 </style>
 
 <body style="background-color: #0D1117" />
@@ -49,21 +54,25 @@
     @{
         foreach (var prj in projetos)
         {
-                <div class="projeto">
-                    <div class="titulo">
-                        <p>@prj.Titulo <p />
-                    </div>
+                <div class="d-flex justify-content-center">
+                    <div class="col-8 justify-content-center">
+                        <div style="text-align: center" class="projeto">
+                            <div class="titulo">
+                                <p>@prj.Titulo <p />
+                            </div>
 
-                    <div class="imagem">
-                        <img src="@prj.Imagem" width="400" height="400" />
-                    </div>
+                            <div style="box-shadow: 0 3px 10px rgba(0, 200, 255, 0.5) inset " class="imagem">
+                                <img style="border: 2px dashed #066C8B; margin-top: 15px; margin-bottom: 15px;" src="@prj.Imagem" width="500" height="500" />
+                            </div>
 
-                    <div class="descricao">
-                        <p>@prj.Descricao <p />
-                    </div>
+                            <div class="descricao">
+                                <p>@prj.Descricao <p />
+                            </div>
 
-                    <div class="itens">
-                        <p>@prj.Itens <p />
+                            <div class="itens">
+                                <p>@prj.Itens <p />
+                            </div>
+                        </div>
                     </div>
                 </div>
         }
