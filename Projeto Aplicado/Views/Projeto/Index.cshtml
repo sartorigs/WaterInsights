@@ -39,6 +39,14 @@
     .projeto {
         border: 3px solid #066C8B;
         border-radius: 5%;
+        margin-bottom: 5em;
+    }
+    .nome p {
+        margin-bottom: 0px;
+        padding: 5px;
+    }
+    p {
+        margin-bottom: 0px;
     }
 </style>
 
@@ -56,22 +64,24 @@
         {
                     <div class="d-flex justify-content-center">
                         <div class="col-8 justify-content-center">
-                            <div style="text-align: center; background: #161B22" class="projeto">
-                                <div class="titulo">
-                                    <p>@prj.Titulo <p />
+                            <div style="text-align: center; background: #161B22;" class="projeto">
+                                <div style="box-shadow: 0 -10px 10px -10px rgba(0, 200, 255, 0.5) inset" class="nome">
+                                    <p>Usuário: nome<p />
+                                </div>
+                                <div style="border-bottom: 1px solid rgba(0, 200, 255, 0.5); border-top: 1px solid rgba(0, 200, 255, 0.5);" class="titulo">
+                                    <p>Título: @prj.Titulo <p />
                                 </div>
 
                                 <div style="box-shadow: 0 3px 10px rgba(0, 200, 255, 0.5) inset " class="imagem">
-                                    <img style="border: 2px dashed #066C8B; margin-top: 15px; margin-bottom: 15px;" src="@prj.Imagem" width="400" height="400" />
+                                    <img style="border: 2px dashed #066C8B; margin-top: 20px; margin-bottom: 20px;" src="@prj.Imagem" width="400" height="400" />
                                 </div>
 
                                 <div style="border-bottom: 1px solid rgba(0, 200, 255, 0.5); border-top: 1px solid rgba(0, 200, 255, 0.5)" class="descricao">
-                                    <p style="word-break: break-word; padding: 7px">@prj.Descricao <p />
+                                    <p style="word-break: break-word; padding: 7px">Descrição: @prj.Descricao <p />
                                 </div>
 
-                                <div style="box-shadow: 0 10px 10px -10px rgba(0, 200, 255, 0.5) inset"  class="itens">
-                                    <h3 style="color: #fff; padding-top: 10px">Itens</h3>
-                                    <p style="margin-top: 20px">@prj.Itens <p />
+                                <div style="box-shadow: 0 10px 10px -10px rgba(0, 200, 255, 0.5) inset" class="itens">
+                                    <p style="padding: 10px">Itens: @prj.Itens <p />
                                 </div>
                             </div>
                         </div>
