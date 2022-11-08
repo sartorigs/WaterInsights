@@ -25,10 +25,9 @@ namespace Projeto_Aplicado.Repositorios
                 _context.Projetos.Update(projeto);
             _context.SaveChanges();
         }
-
         public List<Projeto> BuscarTodosProjetos()
         {
-            return _context.Projetos.ToList();
+            return _context.Projetos.Include(x => x.Usuario).ToList();
         }
 
         public Projeto BuscarProjetoPorId(long id)

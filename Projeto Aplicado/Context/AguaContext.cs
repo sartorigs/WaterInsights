@@ -15,14 +15,10 @@ namespace Projeto_Aplicado.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<UsuarioProjeto>()
-                            .HasOne(up => up.Projeto)
-                            .WithMany(pr => pr.UsuarioProjeto)
-                            .HasForeignKey(up => up.UsuarioId);
-            modelBuilder.Entity<UsuarioProjeto>()
-                            .HasOne(up => up.Usuario)
-                            .WithMany(u => u.UsuarioProjeto)
-                            .HasForeignKey(up => up.ProjetoId);
+            modelBuilder.Entity<Usuario>()
+                .HasMany(x => x.Projetos)
+                .WithOne(x => x.Usuario)
+                .HasForeignKey(x => x.UsuarioId);
         }
     }
 }

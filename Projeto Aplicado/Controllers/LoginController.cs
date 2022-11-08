@@ -28,7 +28,7 @@ namespace Projeto_Aplicado.Controllers
                 user.Senha = model.Senha;
                 if (_acessoRepository.Acessa(user))
                 {
-                    var usuario = new Usuario() { Id = user.Id};
+                    var usuario = _acessoRepository.RetornaUser(user);
                     HttpContext.Session.SetString("SessionUser", JsonConvert.SerializeObject(usuario));
 ;                    return RedirectToAction("Index", "Home");
                 }

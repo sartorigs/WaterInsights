@@ -42,6 +42,16 @@ namespace Projeto_Aplicado.Controllers
         [HttpPost]
         public IActionResult Novo(ProjetoModel model)
         {
+            Usuario sessionUser;
+            try
+            {
+                sessionUser = JsonConvert.DeserializeObject<Usuario>(HttpContext?.Session.GetString("SessionUser"));
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
             if (ModelState.IsValid)
             {
                 var projeto = new Projeto();
@@ -50,6 +60,7 @@ namespace Projeto_Aplicado.Controllers
                 projeto.Itens = model.Itens;
                 projeto.Titulo = model.Titulo;
                 projeto.Imagem = conversorImagem(model.Imagem);
+                projeto.UsuarioId = sessionUser.Id;
 
                 _projetoRepository.Salvar(projeto);
                 return RedirectToAction("Index");

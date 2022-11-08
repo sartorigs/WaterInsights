@@ -7,5 +7,6 @@ namespace Projeto_Aplicado.Repositorios.Interfaces
         void Cadastrar(Usuario usuario);
 
         bool Acessa(Usuario usuario);
+        Usuario RetornaUser(Usuario usuario);
     }
 }
