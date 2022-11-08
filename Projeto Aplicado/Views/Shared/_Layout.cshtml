@@ -87,6 +87,9 @@
             background-position: 6000px 350px;
         }
     }
+    .dropdown-menu a:hover {
+        background: rgba(22,27,34);
+    } 
 </style>
 
 <!DOCTYPE html>
@@ -113,7 +116,14 @@
                             <a class="nav-link text-light" asp-area="" asp-controller="Cadastro" asp-action="Cadastro">Cadastro</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="FormularioPowerBi" asp-action="FormularioPowerBi">Pesquisa sobre sua água!</a>
+                            <div class="dropdown">
+                                <a style="cursor: pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropMenu" class="nav-link text-light dropdown-toggle">Pesquisa</a>
+                                <div style="background: #161B22" class="dropdown-menu" aria-labelledby="dropMenu">
+                                    <a class="nav-link text-light dropdown-item" asp-area="" asp-controller="FormularioPowerBi" asp-action="FormularioPowerBi">Pesquisa sobre sua água!</a>
+                                    <a class="nav-link text-light dropdown-item" asp-area="" asp-controller="PowerBi" asp-action="PowerBi">Mapa da água!</a>
+                                </div>
+                            </div>
+
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Projeto" asp-action="Index">Projetos</a>
