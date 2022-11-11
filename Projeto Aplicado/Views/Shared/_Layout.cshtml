@@ -87,9 +87,18 @@
             background-position: 6000px 350px;
         }
     }
+
     .dropdown-menu a:hover {
         background: rgba(22,27,34);
-    } 
+    }
+
+    #titulo {
+        font-weight: 600;
+        font-size: 20px;
+        background: -webkit-radial-gradient(rgba(0, 200, 255, 1), rgba(0, 200, 255, 0.3));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 </style>
 
 <!DOCTYPE html>
@@ -105,17 +114,20 @@
     <header>
         <nav style="background-color: #161B22" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" id="bordaCima">
             <div class="container">
-                <a href="/Home/Index"><div style="margin-top: -90px" class="cup"></div></a>
+                <a asp-controller="Home" asp-action="Index"><div style="margin-top: -90px" class="cup"></div></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li style="margin-left: 40px" class="nav-item">
+                        <li style="margin-left: 50px" class="nav-item">
+                            <a id="titulo" class="nav-link text-light" asp-controller="Home" asp-action="Index">Water Insights</a>
+                        </li>
+                        <li style="margin-left: 40px; margin-top: 4px" class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Cadastro" asp-action="Cadastro">Cadastro</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" style="margin-top: 4px">
                             <div class="dropdown">
                                 <a style="cursor: pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropMenu" class="nav-link text-light dropdown-toggle">Pesquisa</a>
                                 <div style="background: #161B22" class="dropdown-menu" aria-labelledby="dropMenu">
@@ -125,7 +137,7 @@
                             </div>
 
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" style="margin-top: 4px">
                             <a class="nav-link text-light" asp-area="" asp-controller="Projeto" asp-action="Index">Projetos</a>
                         </li>
                     </ul>

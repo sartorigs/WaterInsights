@@ -37,9 +37,13 @@ namespace Projeto_Aplicado.Controllers
                 {
                     UsuarioId = model.UsuarioId,
                     value1 = model.value1,
+                    value2 = model.value2,
+                    value3 = model.value3,
+                    value4 = model.value4,
+                    value5 = model.value5,
                 };
                 _powerBiRepository.Salvar(powerBi);
-                return RedirectToAction("Value2", "FormularioPowerBi");
+                return RedirectToAction("PowerBi", "PowerBi");
             }
             return View(model);
         }

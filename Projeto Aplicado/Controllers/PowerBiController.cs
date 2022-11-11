@@ -17,6 +17,7 @@ namespace Projeto_Aplicado.Controllers
             }
             catch (Exception e)
             {
+                ViewBag.Message2 = "Faça o login para poder acessar!!!";
                 return RedirectToAction("Login", "Login");
             }
             var model = new PowerBiModel();
