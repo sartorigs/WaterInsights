@@ -82,37 +82,140 @@
     }
 
     .button-1 {
-      background: #066C8B;
-      border-radius: 999px;
-      box-shadow: #066C8B 0 10px 20px -10px;
-      box-sizing: border-box;
-      color: rgba(255,255,255, 1);
-      cursor: pointer;
-      font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 24px;
-      opacity: 1;
-      outline: 0 solid transparent;
-      padding: 8px 18px;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      width: fit-content;
-      word-break: break-word;
-      border: 0;
+        background: #066C8B;
+        border-radius: 999px;
+        box-shadow: #066C8B 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: rgba(255,255,255, 1);
+        cursor: pointer;
+        font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: fit-content;
+        word-break: break-word;
+        border: 0;
     }
-    .button-1:hover {
-        transform: scale(1.02); 
+
+        .button-1:hover {
+            transform: scale(1.02);
+        }
+
+    .switch {
+        font-weight: 600;
+        background: #eee;
+        position: absolute;
+        width: 150px;
+        height: 50px;
+        text-align: center;
+        margin: -30px 0 0 -75px;
+        background: #0AC07D;
+        transition: all 0.2s ease;
+        border-radius: 25px;
+    }
+
+        .switch span {
+            position: absolute;
+            width: 20px;
+            height: 4px;
+            top: 50%;
+            left: 50%;
+            margin: -2px 0px 0px -4px;
+            background: #fff;
+            display: block;
+            transform: rotate(-45deg);
+            transition: all 0.2s ease;
+        }
+
+            .switch span:after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 4px;
+                height: 12px;
+                margin-top: -8px;
+                background: #fff;
+                transition: all 0.2s ease;
+            }
+
+    input[type=radio] {
+        display: none;
+    }
+
+    .switch label {
+        cursor: pointer;
+        color: rgba(0,0,0,0.2);
+        width: 60px;
+        line-height: 50px;
+        transition: all 0.2s ease;
+    }
+
+    label[for=no] {
+        position: absolute;
+        left: 0px;
+        height: 20px;
+    }
+
+    label[for=yes] {
+        position: absolute;
+        right: 0px;
+    }
+
+    #no:checked ~ .switch {
+        background: #eb4f37;
+    }
+
+        #no:checked ~ .switch span {
+            background: #fff;
+            margin-left: -8px;
+        }
+
+            #no:checked ~ .switch span:after {
+                background: #fff;
+                height: 20px;
+                margin-top: -8px;
+                margin-left: 8px;
+            }
+
+    #yes:checked ~ .switch label[for=yes] {
+        color: #fff;
+    }
+
+    #no:checked ~ .switch label[for=no] {
+        color: #fff;
+    }
+
+    p {
+        color: #fff;
     }
 </style>
 
 <body style="background-color: #0D1117" />
 
-<form asp-controller="FormularioPowerBi" asp-action="Value1">
+<form asp-controller="FormularioPowerBi" asp-action="Value">
     <input asp-for="UsuarioId" type="hidden">
+    <div class="form1">
+        <div>
+            <p class="col-form-label">Você bebe a água da sua torneira?</p>
+        </div>
+        <div class="toggle-radio">
+            <input asp-for="value1" value="0" type="radio" name="rdo" id="no" checked>
+            <input asp-for="value1" value="1" type="radio" name="rdo" id="yes">
+            <div class="switch">
+                <label for="no">Não</label>
+                <label for="yes">Sim</label>
+                <span></span>
+            </div>
+        </div>
+    </div>
     <div class="main">
-        <input asp-for="value1" type="range" min="0" max="100" step="10" id="slider">
+        <input asp-for="value2" type="range" min="0" max="100" step="10" id="slider">
         <div id="selector">
             <div class="selectBtn"></div>
             <div id="selectValue"></div>

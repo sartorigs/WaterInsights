@@ -59,3 +59,22 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: #066C8B;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 10px;
+    background-clip: content-box;
+    background-color: #0D1117;
+}
+    ::-webkit-scrollbar-thumb:hover {
+        border: 2px solid transparent;
+        background-color: #161B22;
+    }
+
+

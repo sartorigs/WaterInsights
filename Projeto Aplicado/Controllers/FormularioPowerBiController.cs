@@ -29,7 +29,7 @@ namespace Projeto_Aplicado.Controllers
             var model = new PowerBiModel();
             return View(model);
         }
-        public IActionResult Value1(PowerBiModel model)
+        public IActionResult Value(PowerBiModel model)
         {
             if (ModelState.IsValid)
             {
