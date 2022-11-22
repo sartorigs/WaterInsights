@@ -34,7 +34,7 @@
         z-index: 2;
     }
 
-    .selectBtn {
+    #selectBtn {
         transform: scale(75%);
         height: 48px;
         width: 48px;
@@ -215,9 +215,9 @@
         </div>
     </div>
     <div class="main">
-        <input asp-for="value2" type="range" min="0" max="100" step="10" id="slider">
+        <input asp-for="value2" value="50" type="range" min="0" max="100" step="10" id="slider">
         <div id="selector">
-            <div class="selectBtn"></div>
+            <div id="selectBtn"></div>
             <div id="selectValue"></div>
         </div>
         <div id="progressBar"></div>

@@ -69,7 +69,7 @@
             float: left;
             clear: both;
             width: 100%;
-            margin-top: -142.5px; 
+            margin-top: -142.5px;
             height: 340px;
             padding: 1.5rem 1.5rem;
             text-align: center;
@@ -134,57 +134,64 @@
             max-width: 400px;
         }
 
-            .uploader #file-image.hidden {
-                display: none;
-            }
-
-        .uploader #notimage {
-            display: block;
-            float: left;
-            clear: both;
-            width: 100%;
+    @@media screen and (max-width: 991px) {
+        .uploader #file-image {
+            width: 200px;
         }
+    }
 
-            .uploader #notimage.hidden {
-                display: none;
-            }
+    .uploader #file-image.hidden {
+        display: none;
+    }
 
-        .uploader progress, .uploader .progress {
-            display: inline;
-            clear: both;
-            margin: 0 auto;
-            width: 100%;
-            max-width: 180px;
-            height: 8px;
-            border: 0;
-            border-radius: 4px;
-            background-color: #eee;
-            overflow: hidden;
-        }
+    .uploader #notimage {
+        display: block;
+        float: left;
+        clear: both;
+        width: 100%;
+        margin-top: 0;
+    }
 
-            .uploader .progress[value]::-webkit-progress-bar {
-                border-radius: 4px;
-                background-color: #eee;
-            }
-
-            .uploader .progress[value]::-webkit-progress-value {
-                background: linear-gradient(to right, #2171B4 0%, #174165 50%);
-                border-radius: 4px;
-            }
-
-            .uploader .progress[value]::-moz-progress-bar {
-                background: linear-gradient(to right, #2171B4 0%, #174165 50%);
-                border-radius: 4px;
-            }
-
-        .uploader input[type="file"] {
+        .uploader #notimage.hidden {
             display: none;
         }
 
-        .uploader div {
-            margin: 70px 0 0.5rem 0;
-            color: grey;
+    .uploader progress, .uploader .progress {
+        display: inline;
+        clear: both;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 180px;
+        height: 8px;
+        border: 0;
+        border-radius: 4px;
+        background-color: #eee;
+        overflow: hidden;
+    }
+
+        .uploader .progress[value]::-webkit-progress-bar {
+            border-radius: 4px;
+            background-color: #eee;
         }
+
+        .uploader .progress[value]::-webkit-progress-value {
+            background: linear-gradient(to right, #2171B4 0%, #174165 50%);
+            border-radius: 4px;
+        }
+
+        .uploader .progress[value]::-moz-progress-bar {
+            background: linear-gradient(to right, #2171B4 0%, #174165 50%);
+            border-radius: 4px;
+        }
+
+    .uploader input[type="file"] {
+        display: none;
+    }
+
+    .uploader div {
+        margin: 70px 0 0.5rem 0;
+        color: grey;
+    }
 
     .btn {
         background: #066C8B;
@@ -259,8 +266,8 @@
                 <img style="max-height: 200px" id="file-image" src="#" alt="Preview" class="hidden">
                 <div id="start">
                     <i class="fa fa-download" aria-hidden="true"></i>
-                    <div>Selecione ou arraste um arquivo aqui!</div>
-                    <div id="notimage" class="hidden">Por favor, insira uma imagem!</div>
+                    <div>Selecione um arquivo aqui!</div>
+                    <div style="color: red" id="notimage" class="hidden">Por favor, insira uma imagem! (JPG, JPEG, PNG)</div>
                     <span id="file-upload-btn" class="btn btn-primary">Selecionar um arquivo</span>
                 </div>
                 <div id="response" class="hidden">

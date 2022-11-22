@@ -1,4 +1,5 @@
-﻿<style>
+﻿
+<style>
     #bordaCima {
         box-shadow: 0 3px 10px rgba(0, 200, 255, 0.5) !important;
     }
@@ -6,12 +7,11 @@
     .waves {
         position: relative;
         width: 100%;
-        height: 10vh; /*Fix for safari gap*/
+        height: 10vh;
         margin-top: 2em;
         min-height: 50px;
         max-height: 150px;
     }
-    /* Animation */
 
     .parallax > use {
         animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
@@ -135,7 +135,6 @@
                                     <a class="nav-link text-light dropdown-item" asp-area="" asp-controller="PowerBi" asp-action="PowerBi">Mapa da água!</a>
                                 </div>
                             </div>
-
                         </li>
                         <li class="nav-item" style="margin-top: 4px">
                             <a class="nav-link text-light" asp-area="" asp-controller="Projeto" asp-action="Index">Projetos</a>

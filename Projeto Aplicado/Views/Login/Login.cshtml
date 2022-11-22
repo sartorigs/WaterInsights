@@ -71,7 +71,6 @@
         border: 0;
     }
 
-
         .button-2:hover {
             transform: scale(1.02);
         }
@@ -84,12 +83,18 @@
         background: -webkit-radial-gradient(rgba(0, 200, 255, 1), rgba(0, 200, 255, 0.3));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        transition: ease font-size 0.3s;
+    }
+
+    @@media screen and (max-width: 800px) {
+        #titulo1 {
+            font-size: 60px;
+        }
     }
 </style>
 
-<body style="background-color: #0D1117">
+<body style="background-color: #0D1117"/>
 
-</body>
 <div style="float: left; width: 100%; display: flex; justify-content: center">
     <p id="titulo1">Water Insights</p>
 </div>

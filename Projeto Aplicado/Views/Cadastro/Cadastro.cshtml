@@ -58,7 +58,7 @@
 <div class="row g-2 align-items-center">
     <div class="col-md">
         <label for="dataNasc" class="col-form-label">Data Nascimento</label>
-        <input type="date" value="" asp-for="DataNascimento" id="dataNasc" class="form-control" required>   
+        <input type="date" value="" asp-for="DataNascimento" id="dataNasc" class="form-control" min='1900-01-01' max='2010-12-31' required>   
     </div>
     <div class="col-md">
         <label style="z-index: 0" for="senha" class="col-form-label">Senha</label>

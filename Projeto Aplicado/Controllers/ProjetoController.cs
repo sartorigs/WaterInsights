@@ -22,13 +22,12 @@ namespace Projeto_Aplicado.Controllers
             try
             {
                 var sessionUser = JsonConvert.DeserializeObject<Usuario>(HttpContext?.Session.GetString("SessionUser"));
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 return RedirectToAction("Login", "Login");
             }
-            
-            
-                
+
             ViewBag.Projetos = _projetoRepository.BuscarTodosProjetos();
             return View();
         }
