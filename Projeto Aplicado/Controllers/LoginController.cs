@@ -4,6 +4,9 @@ using Newtonsoft.Json;
 using Projeto_Aplicado.Entidades;
 using Projeto_Aplicado.Models;
 using Projeto_Aplicado.Repositorios.Interfaces;
+using System;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Projeto_Aplicado.Controllers
 {
@@ -25,7 +28,7 @@ namespace Projeto_Aplicado.Controllers
             {
                 var user = new Usuario();
                 user.Email = model.Email;
-                user.Senha = model.Senha;
+                user.Senha = HashPassord(model.Senha);
                 if (_acessoRepository.Acessa(user))
                 {
                     var usuario = _acessoRepository.RetornaUser(user);
@@ -36,6 +39,15 @@ namespace Projeto_Aplicado.Controllers
             }
             ViewBag.Message1 = "Acesso Negado!!!";
             return View("Login", model);
+        }
+
+        private string HashPassord(string password)
+        {
+            var sha = SHA256.Create();
+            var byteArray = Encoding.Default.GetBytes(password);
+            var hashedPassword = sha.ComputeHash(byteArray);
+            return Convert.ToBase64String(hashedPassword);
+
         }
     }
 }

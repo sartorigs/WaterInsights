@@ -27,7 +27,7 @@ namespace Projeto_Aplicado.Repositorios
         }
         public List<Projeto> BuscarTodosProjetos()
         {
-            return _context.Projetos.Include(x => x.Usuario).ToList();
+            return _context.Projetos.Include(x => x.Usuario).OrderByDescending(c => c.Id).ToList();
         }
 
         public Projeto BuscarProjetoPorId(long id)

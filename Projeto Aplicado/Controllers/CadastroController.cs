@@ -2,6 +2,9 @@
 using Projeto_Aplicado.Models;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_Aplicado.Repositorios.Interfaces;
+using System.Security.Cryptography;
+using System.Text;
+using System;
 
 namespace Projeto_Aplicado.Controllers
 {
@@ -28,7 +31,7 @@ namespace Projeto_Aplicado.Controllers
                     Nome = model.Nome,
                     Sobrenome = model.Sobrenome,
                     Email = model.Email,
-                    Senha = model.Senha,
+                    Senha = HashPassord(model.Senha),
                     DataNascimento = model.DataNascimento,
                     Regiao = new Regiao()
                     {
@@ -42,6 +45,16 @@ namespace Projeto_Aplicado.Controllers
                 return RedirectToAction("Index", "Home");
             }
             return View(model);
-        } 
+        }
+        
+        private string HashPassord(string password)
+        {
+            var sha = SHA256.Create();
+            var byteArray = Encoding.Default.GetBytes(password);
+            var hashedPassword = sha.ComputeHash(byteArray);
+            return Convert.ToBase64String(hashedPassword);
+            
+        }
+
     }
 }
