@@ -18,14 +18,17 @@ namespace Projeto_Aplicado.Controllers
 
         public IActionResult FormularioPowerBi()
         {
+            Usuario sessionUser;
             try
             {
-                var sessionUser = JsonConvert.DeserializeObject<Usuario>(HttpContext?.Session.GetString("SessionUser"));
+                sessionUser = JsonConvert.DeserializeObject<Usuario>(HttpContext?.Session.GetString("SessionUser"));
+
             }
             catch (Exception e)
             {
                 return RedirectToAction("Login", "Login");
             }
+            ViewBag.UsuarioSession = sessionUser.Id;
             var model = new PowerBiModel();
             return View(model);
         }

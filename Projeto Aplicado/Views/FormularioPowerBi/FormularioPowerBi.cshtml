@@ -152,7 +152,7 @@
 <body style="background-color: #0D1117" />
 
 <form asp-controller="FormularioPowerBi" asp-action="Value">
-    <input asp-for="UsuarioId" type="hidden">
+    <input asp-for="UsuarioId" type="hidden" value="@ViewBag.UsuarioSession">
     <div class="formulario">
         <div class="switchMsg">
             <div class="row">
@@ -162,7 +162,7 @@
             </div>
             <div class="row">
                 <div class="form-group" style="margin: 0 auto">
-                    <input asp-for="value1" value="0" type="radio" name="rdo" id="no" checked>
+                    <input asp-for="value1" value="0" type="radio" name="rdo" id="no" >
                     <input asp-for="value1" value="1" type="radio" name="rdo" id="yes">
                     <div class="switch">
                         <label for="no">Não</label>
