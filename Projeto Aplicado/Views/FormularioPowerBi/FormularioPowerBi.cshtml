@@ -1,86 +1,7 @@
 ﻿@model Projeto_Aplicado.Models.PowerBiModel;
 
+
 <style>
-    .main {
-        width: 40%;
-        margin: auto;
-        margin-top: 30%;
-        position: relative;
-    }
-
-    #slider {
-        -webkit-appearance: none;
-        width: 100%;
-        height: 7px;
-        border-radius: 3px;
-    }
-
-        #slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 48px;
-            height: 48px;
-            cursor: pointer;
-            position: relative;
-            z-index: 3;
-        }
-
-    #selector {
-        height: 104px;
-        width: 48px;
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-    }
-
-    #selectBtn {
-        transform: scale(75%);
-        height: 48px;
-        width: 48px;
-        background-image: url(https://static.vecteezy.com/system/resources/previews/011/029/799/original/blue-water-drop-for-symbol-design-png.png);
-        background-size: cover;
-        background-position: center;
-        border-radius: 50%;
-        position: absolute;
-        bottom: 0;
-    }
-
-    #selectValue {
-        margin-top: 12px;
-        transform: translateX(25%);
-        width: 32px;
-        height: 30px;
-        position: absolute;
-        top: 0;
-        background: rgba(33, 113, 180, 1);
-        border-radius: 4px;
-        text-align: center;
-        line-height: 30px;
-        font-size: 15px;
-        font-weight: bold;
-    }
-
-        #selectValue::after {
-            content: '';
-            border-top: 11.3px solid rgba(33, 113, 180, 1);
-            border-left: 16px solid #0D1117;
-            border-right: 16px solid #0D1117;
-            position: absolute;
-            bottom: -14px;
-            left: 0;
-        }
-
-    #progressBar {
-        width: 50%;
-        height: 7px;
-        background: rgba(33, 113, 180, 1);
-        border-radius: 3px;
-        position: absolute;
-        bottom: 4px;
-        left: 0;
-    }
-
     .button-1 {
         background: #066C8B;
         border-radius: 999px;
@@ -110,11 +31,10 @@
     .switch {
         font-weight: 600;
         background: #eee;
-        position: absolute;
+        position: relative;
         width: 150px;
         height: 50px;
         text-align: center;
-        margin: -30px 0 0 -75px;
         background: #0AC07D;
         transition: all 0.2s ease;
         border-radius: 25px;
@@ -192,7 +112,40 @@
     }
 
     p {
+        margin-top: 1.5rem;
         color: #fff;
+    }
+
+    .slider {
+    }
+
+    .formulario {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 60%;
+        background: #161B22;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
+    }
+
+    .switchMsg {
+        margin: 0 auto;
+    }
+
+    .sliders {
+        margin: 0 auto;
+    }
+
+    .slider {
+        margin: 0 auto;
+        width: 250px;
     }
 </style>
 
@@ -200,27 +153,64 @@
 
 <form asp-controller="FormularioPowerBi" asp-action="Value">
     <input asp-for="UsuarioId" type="hidden">
-    <div class="form1">
-        <div>
-            <p class="col-form-label">Você bebe a água da sua torneira?</p>
-        </div>
-        <div class="toggle-radio">
-            <input asp-for="value1" value="0" type="radio" name="rdo" id="no" checked>
-            <input asp-for="value1" value="1" type="radio" name="rdo" id="yes">
-            <div class="switch">
-                <label for="no">Não</label>
-                <label for="yes">Sim</label>
-                <span></span>
+    <div class="formulario">
+        <div class="switchMsg">
+            <div class="row">
+                <div class="form-group">
+                    <p class="col-form-label" style="margin-top: 0">Você bebe a água da sua torneira?</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" style="margin: 0 auto">
+                    <input asp-for="value1" value="0" type="radio" name="rdo" id="no" checked>
+                    <input asp-for="value1" value="1" type="radio" name="rdo" id="yes">
+                    <div class="switch">
+                        <label for="no">Não</label>
+                        <label for="yes">Sim</label>
+                        <span></span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="main">
-        <input asp-for="value2" value="50" type="range" min="0" max="100" step="10" id="slider">
-        <div id="selector">
-            <div id="selectBtn"></div>
-            <div id="selectValue"></div>
+        <div class="sliders">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <p class="col-form-label col-12">De 0 a 100 avalie a qualidade da água na região</p>
+                    </div>
+                    <div class="row">
+                        <input asp-for="value2" value="50" type="range" min="0" max="100" step="10" class="slider">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <p class="col-form-label col-12">De 0 a 100 avalie a distribuição de água em sua cidade</p>
+                    </div>
+                    <div class="row">
+                        <input asp-for="value3" value="50" type="range" min="0" max="100" step="10" class="slider">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <p class="col-form-label col-12">De 0 a 100 você considera caro ou barato a sua fatura de água (0 barato - 100 caro)</p>
+                    </div>
+                    <div class="row">
+                        <input asp-for="value4" value="50" type="range" min="0" max="100" step="10" class="slider">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <p class="col-form-label col-12" style="height: 62px">De 0 a 100 avalie o seu gasto de água (0 pouco - 100 muito)</p>
+                        
+                    </div>
+                    <div class="row">
+                        <input asp-for="value5" value="50" type="range" min="0" max="100" step="10" class="slider">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="progressBar"></div>
     </div>
     <div style="margin-top: 2rem; justify-content: space-between" class="row g-12">
         <div class="col-12">
@@ -230,17 +220,5 @@
 </form>
 
 <script>
-    let slider = document.getElementById('slider')
-    let selector = document.getElementById('selector')
-    let selectValue = document.getElementById('selectValue')
-    let progressBar = document.getElementById('progressBar')
-
-    selectValue.innerHTML = slider.value
-
-    slider.oninput = function() {
-        selectValue.innerHTML = this.value
-        selector.style.left = this.value + '%'
-        progressBar.style.width = this.value + '%'
-    }
 
 </script>
